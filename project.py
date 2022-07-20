@@ -36,4 +36,5 @@ questions = [
                     'C: equals()'
                 ],            
             ]
-
+            
+answers = ['C','A','B','B','A','B']
