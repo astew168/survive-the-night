@@ -1,3 +1,5 @@
+import random
+
 questions = [
                 [
                     'What does the print() function do?',
@@ -39,6 +41,8 @@ questions = [
 
 answers = ['C','A','B','B','A','B']
 
+questions_asked = []
+
 def ask_question(question_index):
     question = questions[question_index]
     print('\n' + question[0])
@@ -56,7 +60,44 @@ def check_answer(question_index, answer):
     correct_answer = answers[question_index]
     return (answer == correct_answer)
 
-def test():
-    ask_question(2)
+def random_question_result():
+    while True:
+        random_index = random.randint(0, len(questions))
+        if random_index not in questions_asked:
+            questions_asked.append(random_index)
+            break
+        
+    ask_question(random_index)
     answer = get_answer()
-    print(check_answer(2, answer))
+    return check_answer(random_index, answer)
+
+def get_choice(choices):
+    choice = input().lower()
+    while choice not in choices:
+        print('That is not a valid choice!')
+        choice = input().lower()
+    return choice
+
+def main():
+    print('It is a dark and stormy night and you find yourself in the unfortunate position of being lost far away from home. ')
+    print('In your frantic search for shelter, you see it in the distance: an old abandoned mansion, crumbling but seemingly safe.')
+    print('You make your way to the front of the mansion where you are confronted by the first of many choices to come.\n')
+
+    print('Do you...')
+    print('\t' + 'A: Go through the front door')
+    print('\t' + 'B: Crawl through the side window')
+    this_choice = get_choice(['a', 'b']) 
+
+    if this_choice == 'a':
+        print('The front door creaks open and you are met with a frightening sight, a ghost!')
+        print('This ghost demands that you answer his riddle correctly or he will kill you.')
+        user_result = random_question_result()
+        if user_result is False:
+            print('You died!')
+            return
+
+    print('You survived!')
+
+main()
+    
+

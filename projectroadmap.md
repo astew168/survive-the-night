@@ -10,4 +10,4 @@
 - [x] create get_answer function
 - [x] create check_answer function
 - [ ] handle incorrect function
-- [ ] start main story
+- [x] start main story
