@@ -7,7 +7,7 @@
 - [x] start on question library
 - [x] start on answer library 
 - [x] create ask_question function
-- [ ] create get_answer function
-- [ ] create check_answer function
+- [x] create get_answer function
+- [x] create check_answer function
 - [ ] handle incorrect function
 - [ ] start main story

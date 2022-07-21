@@ -51,3 +51,12 @@ def get_answer():
         print('You must answer A, B, or C!')
         answer = input().upper()
     return answer
+
+def check_answer(question_index, answer):
+    correct_answer = answers[question_index]
+    return (answer == correct_answer)
+
+def test():
+    ask_question(2)
+    answer = get_answer()
+    print(check_answer(2, answer))
