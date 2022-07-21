@@ -44,3 +44,10 @@ def ask_question(question_index):
     print('\n' + question[0])
     for answer_choice in question[1:]:
         print('\t' + answer_choice)
+
+def get_answer():
+    answer = input().upper()
+    while answer != 'A' and answer != 'B' and answer != 'C':
+        print('You must answer A, B, or C!')
+        answer = input().upper()
+    return answer
