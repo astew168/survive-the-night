@@ -36,5 +36,11 @@ questions = [
                     'C: equals()'
                 ],            
             ]
-            
+
 answers = ['C','A','B','B','A','B']
+
+def ask_question(question_index):
+    question = questions[question_index]
+    print('\n' + question[0])
+    for answer_choice in question[1:]:
+        print('\t' + answer_choice)

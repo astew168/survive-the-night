@@ -5,8 +5,8 @@
 - [x] create readme and projectroadmap files 
 - [x] explore and run similar code to my project
 - [x] start on question library
-- [ ] start on answer library 
-- [ ] create ask_question function
+- [x] start on answer library 
+- [x] create ask_question function
 - [ ] create get_answer function
 - [ ] create check_answer function
 - [ ] handle incorrect function
