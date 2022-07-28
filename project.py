@@ -95,7 +95,22 @@ def main():
         if user_result is False:
             print('You died!')
             return
+    print('You\'ve sucessfully made it past the first obstacle, but there are many more to come.')
+    print('You enter the foyer and see a large staircase infront of you.\n')
 
+    print('Do you...')
+    print('\t' + 'A: Go up the staircase')
+    print('\t' + 'B: Explore more downstairs')
+    this_choice = get_choice(['a', 'b'])
+
+    if this_choice == 'b':
+        print('Wrong choice! A ghost appears and shouts his riddle at you.')
+        user_result = random_question_result()
+        if user_result is False:
+            print('You died!')
+            return
+
+        
     print('You survived!')
 
 main()
