@@ -70,8 +70,8 @@ questions = [
                 [
                     'What does the pop() function do?',
                     'A: adds a new item to the middle of a string',
-                    'B: removes and returns the last value in a string',
-                    'C: returns "we actually call it soda where I\'\m from"'
+                    'B: removes and returns the last value in a list',
+                    'C: returns "we actually call it soda where I\'m from"'
                 ],                                
             ]
 
@@ -98,7 +98,7 @@ def check_answer(question_index, answer):
 
 def random_question_result():
     while True:
-        random_index = random.randint(0, len(questions))
+        random_index = random.randint(0, len(questions)-1)
         if random_index not in questions_asked:
             questions_asked.append(random_index)
             break
@@ -115,6 +115,7 @@ def get_choice(choices):
     return choice
 
 def main():
+    print()
     print('It is a dark and stormy night and you find yourself in the unfortunate position of being lost far away from home. ')
     print('In your frantic search for shelter, you see it in the distance: an old abandoned mansion, crumbling but seemingly safe.')
     print('You make your way to the front of the mansion where you are confronted by the first of many choices to come.\n')
@@ -193,6 +194,7 @@ def main():
     if this_choice == 'a':
         print('Why did you think that would work?')
         print('You died!')
+        return 
 
     print('You survived!')
 main()
