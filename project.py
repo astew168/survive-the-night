@@ -146,9 +146,55 @@ def main():
             print('You died!')
             return
 
-        
-    print('You survived!')
+    print('You come across two doors. Which do you go through?')
+    print('\t' + 'A: The door on the left')
+    print('\t' + 'B: The door on the right')
+    this_choice = get_choice(['a', 'b'])
 
+    if this_choice == 'a':
+        print('Oh no! A ghost needs you to asnwer his question!')
+        user_result = random_question_result()
+        if user_result is False:
+            print('You died!')
+            return
+
+    print('The door slowly creaks open.')
+    print('Do you...')
+    print('\t' + 'A: proceed through the dark')
+    print('\t' + 'B: shout, "Who\'s there?"')
+    this_choice = get_choice(['a', 'b'])
+
+    if this_choice == 'b':
+        print('Who did you think it was? You would be the first person to die in a horror movie.')
+        user_result = random_question_result()
+        if user_result is False:
+            print('You died!')
+            return
+
+    print('You come across a long hallway.')
+    print('Do you...')
+    print('\t' + 'A: Slowly creep down the hallway trying to not make a sound')
+    print('\t' + 'B: Run down the hall screaming for your life')
+    this_choice = get_choice(['a', 'b'])
+
+    if this_choice == 'b':
+        print('Yup, you would definitely die first in a horror movie.')
+        user_result = random_question_result()
+        if user_result is False:
+            print('You died!')
+            return
+
+    print('Finally you discover a possible escape route.')
+    print('Do you...')
+    print('\t' + 'A: Jump out the window')
+    print('\t' + 'B: Shimmy down the drain pipe')
+    this_choice = get_choice(['a', 'b'])
+
+    if this_choice == 'a':
+        print('Why did you think that would work?')
+        print('You died!')
+
+    print('You survived!')
 main()
     
 
