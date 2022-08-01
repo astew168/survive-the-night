@@ -36,10 +36,46 @@ questions = [
                     'A: = ',
                     'B: ==',
                     'C: equals()'
-                ],            
+                ],       
+ [
+                    'How would you output "Hello World." in Python?',
+                    'A: p("Hello World")',
+                    'B: print("Hello World.")',
+                    'C: "Hello World"'
+                ],
+                [
+                    'What is the file extension for Python files?',
+                    'A: .py',
+                    'B: .pyth',
+                    'C: .edu'
+                ],
+                [
+                    'Which statement is used to stop a loop?',
+                    'A: stop',
+                    'B: done',
+                    'C: break'
+                ], 
+                [               
+                    'What does the upper() function do?',
+                    'A: capitalizes the first letter in a string',
+                    'B: capitalizes all the letters in a string',
+                    'C: turns uppercase letters into lowercase in a string'
+                ],               
+                [
+                    'Which of the following is a float?',
+                    'A: 3.7',
+                    'B: 3',
+                    'C: 0'
+                ],
+                [
+                    'What does the pop() function do?',
+                    'A: adds a new item to the middle of a string',
+                    'B: removes and returns the last value in a string',
+                    'C: returns "we actually call it soda where I\'\m from"'
+                ],                                
             ]
 
-answers = ['C','A','B','B','A','B']
+answers = ['C','A','B','B','A','B','B','A','C','B','A','B']
 
 questions_asked = []
 
